@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={6in, 8.5in}]{geometry}
+\usepackage[final]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{minted}
+\usepackage{multicol}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage[english]{babel}
+
+\title{Constructing of three phase transformer using three single phase transformers
+\& observing line \& phase voltage relation in primary and
+secondary windings.}
+\author{}
+\date{}
+
+\begin{document}
+\input{omaer_sir_cover.tex}
+\pagebreak
+
+\maketitle
+\section{Introduction}
+\subsection*{Three phase motor}
+
+
+\pagebreak
+\subsection*{Circuit Diagrams}
+\input{circuit_diagrams.tex}
+
+\section{Tools Used}
+\begin{itemize}
+    \item Three Phase Motor, (220/440V, 9.1/4.55A)
+    \item Ammeter (0A - 5A)
+    \item Voltmeter (0V - 120V)
+    \item Wattmeter
+    \item Three Phase AC supply (220V)
+    \item Three phase Variac (0-250V)
+    \item Connecting wires
+\end{itemize}
+
+\section{Data \& Calculation}
+\subsection{Data Table:}
+\begin{table}[H]
+    \centering
+    \caption{Y Connection}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \bf{V\textsubscript{an}} & \bf{V\textsubscript{bn}} & \bf{V\textsubscript{cn}} & \bf{V\textsubscript{AB}} & \bf{V\textsubscript{BC}} & \bf{V\textsubscript{CA}} \\
+        \hline
+        100.8                    & 100.7                    & 101.5                    & 175.8                    & 176.8                    & 177.4                    \\
+        \hline
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{$\Delta$ Connection}
+    \begin{tabular}{|c|c|}
+        \hline
+        \bf{V\textsubscript{an}} & \bf{V\textsubscript{AB}} \\
+        \hline
+        150.6                    & 131.7                    \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Calculation:}
+For Y-connection, \[V_L = \sqrt{3}V_P\] \\
+Line Voltage, \[V_{an} = 100.8V\] \\
+$\therefore$ Phase voltage, \[V_{AB} = \sqrt{3}\times 100.8 = 174.59\] \\
+Average Measured phase voltage, \[V_{AB} = \frac{175.8+176.8+177.4}{3} = 176.67V\] \\\\
+For $\Delta$-connection, \[V_L = V_P\] \\
+Line voltage, \[V_{an} = 100.7V\] \\
+Measured phase voltage, \[V_{AB} = 100.7V\] \\
+
+\section{Discussion}
+Just like three phase supply, in transformers, the relation persists. In wye connection, the line \& phase voltages aren't the same but in delta connection, they are the same.
+
+
+\section{Conclusion}
+Since this experiment was done with AC supply, utmost caution was exercised to avoid any accident. Additionally, the line and phase current relation wasn't tested as it'd require precise and cautious connection. To avoid any dangers, only the voltage relation was done in this experiment.
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+
+\end{document}
